@@ -5,6 +5,7 @@
 //  Created by Kostya on 16.11.15.
 //  Copyright © 2015 Stolyarenko K.S. All rights reserved.
 //
+#import "SoundManager.h"
 #define ycwr @"Your choice was a rock"
 #define ycwp @"Your choice was a paper"
 #define ycws @"Your choice was a scissors"
@@ -33,21 +34,38 @@
 - (IBAction)rock:(id)sender;
 - (IBAction)paper:(id)sender;
 - (IBAction)scissors:(id)sender;
-
+-(IBAction)play:(id)sender;
 
 @end
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [SoundManager sharedManager].allowsBackgroundMusic = YES;
+    [[SoundManager sharedManager] prepareToPlay];
+}
+
+
 - (IBAction)rock:(id)sender{
     self.playerLabel.text = [NSString stringWithFormat:ycwr];
-    int computer = arc4random_uniform(3);
+    srandom(time(0));
+    NSInteger computer = arc4random()%3;
     if (computer == 0)
-    {self.computerLabel.text = [NSString stringWithFormat:ccr];
+    {
+    
+#warning player dont working
+    [[SoundManager sharedManager] playSound:@"test" looping:NO];
+    [[SoundManager sharedManager] playMusic:@"test" looping:YES];
+        
+    self.computerLabel.text = [NSString stringWithFormat:ccr];
     self.resultLabel.text = [NSString stringWithFormat:nw];
           _lose.hidden=YES;
           _nill.hidden=NO;
           _win.hidden=YES;
+        
+
+    
     }
     else if (computer ==1)
     {self.computerLabel.text = [NSString stringWithFormat:ccp];
@@ -66,7 +84,8 @@
 
 - (IBAction)paper:(id)sender{
     self.playerLabel.text = [NSString stringWithFormat:ycwp];
-    int computer = arc4random_uniform(3);
+    srandom(time(0));
+    NSInteger computer = arc4random()%3;
     if (computer == 0)
     {self.computerLabel.text = [NSString stringWithFormat:ccr];
     self.resultLabel.text = [NSString stringWithFormat:yaw];
@@ -91,7 +110,8 @@
 
 - (IBAction)scissors:(id)sender{
     self.playerLabel.text = [NSString stringWithFormat:ycws];
-    int computer = arc4random_uniform(3);
+    srandom(time(0));
+    NSInteger computer = arc4random()%3;
     if (computer == 0)
     {self.computerLabel.text = [NSString stringWithFormat:ccr];
     self.resultLabel.text = [NSString stringWithFormat:yal];
@@ -113,6 +133,20 @@
         _nill.hidden=NO;
         _win.hidden=YES;
     }}
+
+-(IBAction)play:(id)sender
+{
+
+NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"test"
+                                                          ofType:@"m4a"];
+NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+
+AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+                                                               error:nil];
+player.numberOfLoops = -1; //Infinite
+
+[player play];
+}
 
 
 @end

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,78 +16,136 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="e0f877a194704fd679f2261e262" translatesAutoresizingMaskIntoConstraints="NO" id="miU-A5-FcB">
-                                <rect key="frame" x="-36" y="0.0" width="765" height="845"/>
-                                <animations/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="фон" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-AA-ZQC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="702"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ze5-56-ksD">
-                                <rect key="frame" x="20" y="95" width="108" height="109"/>
-                                <animations/>
-                                <state key="normal" title="Rock" image="481293737"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ze5-56-ksD">
+                                <rect key="frame" x="162" y="129" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6ea-TT-V97"/>
+                                    <constraint firstAttribute="width" constant="80" id="eMj-oP-kwz"/>
+                                </constraints>
+                                <state key="normal" title="Rock" image="камень"/>
                                 <connections>
                                     <action selector="rock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcV-Do-9t3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-hk-9YI">
-                                <rect key="frame" x="246" y="95" width="108" height="101"/>
-                                <animations/>
-                                <state key="normal" title="Scissors" image="scissors_PNG10"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-hk-9YI">
+                                <rect key="frame" x="359" y="129" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="FBM-mc-41R"/>
+                                    <constraint firstAttribute="height" constant="80" id="Vsp-Mn-IA4"/>
+                                </constraints>
+                                <state key="normal" title="Scissors" image="ножницы"/>
                                 <connections>
                                     <action selector="scissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtB-2R-sVB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-wo-cQQ" userLabel="Paper">
-                                <rect key="frame" x="136" y="99" width="107" height="101"/>
-                                <animations/>
-                                <state key="normal" title="Paper" image="0_75dbc_b542d6ac_XL"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-wo-cQQ" userLabel="Paper">
+                                <rect key="frame" x="260" y="129" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ihk-DD-EqF"/>
+                                    <constraint firstAttribute="height" constant="80" id="lAs-eF-Ldd"/>
+                                </constraints>
+                                <state key="normal" title="Paper" image="бумага"/>
                                 <connections>
                                     <action selector="paper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqc-nu-EKE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avF-IT-AkJ">
-                                <rect key="frame" x="63" y="229" width="297" height="35"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avF-IT-AkJ">
+                                <rect key="frame" x="162" y="288" width="277" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="c85-k0-QT4"/>
+                                    <constraint firstAttribute="height" constant="35" id="nHb-w5-9bf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFh-Hq-eRZ">
-                                <rect key="frame" x="63" y="195" width="297" height="36"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFh-Hq-eRZ">
+                                <rect key="frame" x="162" y="232" width="277" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Yi5-iR-uJR"/>
+                                    <constraint firstAttribute="height" constant="36" id="mfc-WC-GgT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCG-dt-Ajc">
-                                <rect key="frame" x="63" y="259" width="297" height="39"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCG-dt-Ajc">
+                                <rect key="frame" x="162" y="343" width="277" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="2wT-yp-Kmb"/>
+                                    <constraint firstAttribute="width" constant="277" id="Jx2-La-TEq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97m-sV-oV3">
-                                <rect key="frame" x="20" y="27" width="356" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97m-sV-oV3">
+                                <rect key="frame" x="162" y="58" width="277" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="b0f-UO-NLH"/>
+                                    <constraint firstAttribute="width" constant="277" id="oVs-Tt-tik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="33"/>
                                 <state key="normal" title="Rock Paper Scissors">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-if-vuW">
-                                <rect key="frame" x="74" y="363" width="230" height="166"/>
-                                <animations/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-hA-5Dj">
+                                <rect key="frame" x="233" y="408" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EmW-eM-6jT"/>
+                                    <constraint firstAttribute="height" constant="150" id="RGX-Fq-a1j"/>
+                                </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="никто" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-hA-5Dj">
-                                <rect key="frame" x="94" y="350" width="191" height="185"/>
-                                <animations/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="win-1" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-if-vuW">
+                                <rect key="frame" x="222" y="397" width="161" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="coO-Eo-MaO"/>
+                                    <constraint firstAttribute="width" constant="161" id="p9q-xY-IIZ"/>
+                                </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="грусть" translatesAutoresizingMaskIntoConstraints="NO" id="RDF-Cs-xRx">
-                                <rect key="frame" x="105" y="363" width="165" height="157"/>
-                                <animations/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loose" translatesAutoresizingMaskIntoConstraints="NO" id="RDF-Cs-xRx">
+                                <rect key="frame" x="218" y="401" width="165" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="XTt-2w-2am"/>
+                                    <constraint firstAttribute="height" constant="157" id="qR2-Ld-Lbk"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="97m-sV-oV3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="01D-wg-JTn"/>
+                            <constraint firstItem="97m-sV-oV3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="3YT-WM-Ejf"/>
+                            <constraint firstItem="eZr-hk-9YI" firstAttribute="top" secondItem="97m-sV-oV3" secondAttribute="bottom" constant="21" id="87b-DN-K4m"/>
+                            <constraint firstItem="aJX-wo-cQQ" firstAttribute="top" secondItem="97m-sV-oV3" secondAttribute="bottom" constant="21" id="OSS-nr-aJV"/>
+                            <constraint firstItem="BFh-Hq-eRZ" firstAttribute="top" secondItem="aJX-wo-cQQ" secondAttribute="bottom" constant="23" id="QHX-g3-2hU"/>
+                            <constraint firstItem="RDF-Cs-xRx" firstAttribute="top" secondItem="XCG-dt-Ajc" secondAttribute="bottom" constant="22" id="Qm9-BN-tk6"/>
+                            <constraint firstItem="avF-IT-AkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SW7-AE-rh8"/>
+                            <constraint firstItem="avF-IT-AkJ" firstAttribute="top" secondItem="BFh-Hq-eRZ" secondAttribute="bottom" constant="20" id="Sro-mY-xEP"/>
+                            <constraint firstItem="BFh-Hq-eRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2e-lR-SX3"/>
+                            <constraint firstItem="XCG-dt-Ajc" firstAttribute="top" secondItem="avF-IT-AkJ" secondAttribute="bottom" constant="7" id="Wop-PQ-Imd"/>
+                            <constraint firstItem="avF-IT-AkJ" firstAttribute="top" secondItem="BFh-Hq-eRZ" secondAttribute="bottom" constant="23" id="ZMh-K8-Xqt"/>
+                            <constraint firstItem="ze5-56-ksD" firstAttribute="top" secondItem="97m-sV-oV3" secondAttribute="bottom" constant="21" id="gk4-4M-OdY"/>
+                            <constraint firstItem="Ff2-hA-5Dj" firstAttribute="top" secondItem="XCG-dt-Ajc" secondAttribute="bottom" constant="29" id="inZ-Sv-XVB"/>
+                            <constraint firstItem="ze5-56-ksD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-98" id="kZH-jp-Zxk"/>
+                            <constraint firstItem="aJX-wo-cQQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l0F-lH-zaJ"/>
+                            <constraint firstItem="RDF-Cs-xRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="lIN-xS-FZJ"/>
+                            <constraint firstItem="XCG-dt-Ajc" firstAttribute="top" secondItem="avF-IT-AkJ" secondAttribute="bottom" constant="20" id="mjx-ll-tOA"/>
+                            <constraint firstItem="lcc-if-vuW" firstAttribute="top" secondItem="XCG-dt-Ajc" secondAttribute="bottom" constant="18" id="pQi-XZ-NUW"/>
+                            <constraint firstItem="XCG-dt-Ajc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qMa-mb-uWQ"/>
+                            <constraint firstItem="eZr-hk-9YI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="99" id="t0s-Lc-9cf"/>
+                            <constraint firstItem="Ff2-hA-5Dj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="8" id="yT7-4g-RfR"/>
+                            <constraint firstItem="lcc-if-vuW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2.5" id="zfc-uQ-28U"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZMh-K8-Xqt"/>
+                                <exclude reference="Wop-PQ-Imd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="computerLabel" destination="avF-IT-AkJ" id="PmG-zq-TBX"/>
@@ -108,12 +165,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0_75dbc_b542d6ac_XL" width="800" height="799"/>
-        <image name="481293737" width="1650" height="1692"/>
-        <image name="e0f877a194704fd679f2261e262" width="1024" height="819"/>
-        <image name="scissors_PNG10" width="1610" height="804"/>
-        <image name="win" width="4266" height="3102"/>
-        <image name="грусть" width="500" height="500"/>
-        <image name="никто" width="600" height="600"/>
+        <image name="loose" width="894" height="894"/>
+        <image name="no" width="667" height="671"/>
+        <image name="win-1" width="734" height="736"/>
+        <image name="бумага" width="100" height="99"/>
+        <image name="камень" width="99" height="100"/>
+        <image name="ножницы" width="100" height="100"/>
+        <image name="фон" width="2560" height="1600"/>
     </resources>
 </document>
